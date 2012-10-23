@@ -11,7 +11,7 @@ To start conversion, run **./run.sh**
 
 	./run.sh
 	Processing ./IMG_0271.MOV to ./IMG_0271.m4v
-        Encoding: task 1 of 1, 99.78 % (55.43 fps, avg 53.28 fps, ETA 00h00m00s)
+	Encoding: task 1 of 1, 99.78 % (55.43 fps, avg 53.28 fps, ETA 00h00m00s)
 
 Notes
 ----------------
