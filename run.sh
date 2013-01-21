@@ -1,7 +1,10 @@
 #!/bin/sh
 
 from=MOV
-to=m4v
+to=mp4
+
+cmd=/Applications/HandBrakeCLI
+[ -x ${cmd} ] || exit 1
 
 echo "Starting conversion from ${from} to ${to}"
 
@@ -12,7 +15,7 @@ do
     [ -e ${output} ] && continue;
     echo ""
     echo "Processing ${input} to ${output}"
-    HandBrakeCLI \
+    ${cmd} \
 	-i ${input} \
 	-o ${output} \
 	--encoder x264 \
@@ -26,5 +29,5 @@ do
 	--arate 48 \
 	--pfr \
     2> /dev/null
-	[ $? == 0 ] && mv ${input} ~/.Trash
+    [ $? == 0 ] && mv ${input} ~/.Trash
 done
